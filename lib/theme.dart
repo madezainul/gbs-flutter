@@ -36,6 +36,10 @@ TextStyle blueTextStyle = GoogleFonts.poppins(
   color: blueColor,
 );
 
+TextStyle yellowTextStyle = GoogleFonts.poppins(
+  color: secondaryColor,
+);
+
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
 FontWeight medium = FontWeight.w500;

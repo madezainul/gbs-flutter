@@ -23,15 +23,65 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget logoText() {
+      return Container(
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'G',
+                style: linkTextStyle.copyWith(
+                  fontSize: 40,
+                  fontWeight: bold,
+                ),
+              ),
+              Text(
+                'BS',
+                style: yellowTextStyle.copyWith(
+                  fontSize: 40,
+                  fontWeight: bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor1,
       body: Center(
         child: Container(
-          width: 130,
-          height: 150,
-          decoration: const BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/logo.png'))),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/logo.png',
+                width: 150,
+              ),
+              logoText(),
+            ],
+          ),
         ),
+        // child: Row(
+        //   children: [
+        //     Text(
+        //       'G',
+        //       style: linkTextStyle.copyWith(
+        //         fontSize: 40,
+        //         fontWeight: bold,
+        //       ),
+        //     ),
+        //     Text(
+        //       'BS',
+        //       style: yellowTextStyle.copyWith(
+        //         fontSize: 40,
+        //         fontWeight: bold,
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ),
     );
   }

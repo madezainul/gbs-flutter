@@ -69,20 +69,16 @@ class _MainPageState extends State<MainPage> {
       switch (currentIndex) {
         case 0:
           return const HomePage();
-          break;
         case 1:
           return BookPage();
-          break;
         case 2:
           return CartPage();
-          break;
         case 3:
           return UserPage();
-          break;
 
         default:
+          return HomePage();
       }
-      return Container();
     }
 
     return Scaffold(
