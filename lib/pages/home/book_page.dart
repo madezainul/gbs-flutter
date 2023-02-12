@@ -22,9 +22,6 @@ class BookPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            // const SizedBox(
-            //   height: 30,
-            // ),
             Container(
               margin: EdgeInsets.only(
                 top: 10,
@@ -57,32 +54,45 @@ class BookPage extends StatelessWidget {
     }
 
     Widget bookList() {
-      return Container(
-        child: Expanded(
-          child: GridView(
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-            children: [
-              BookCardGrid(),
-              BookCardGrid(),
-              BookCardGrid(),
-              BookCardGrid(),
-              BookCardGrid(),
-              BookCardGrid(),
-              BookCardGrid(),
-              BookCardGrid(),
-            ],
+      return Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: GridView(
+          physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 10.0,
+            mainAxisExtent: 250,
           ),
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/book-details');
+              },
+            ),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+            BookCardGrid(),
+          ],
         ),
       );
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          searchBar(),
-          bookList(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            searchBar(),
+            bookList(),
+          ],
+        ),
       ),
     );
   }

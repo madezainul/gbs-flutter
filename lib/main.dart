@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gbs/pages/home/book_detail.dart';
 import 'package:gbs/pages/home/book_page.dart';
 import 'package:gbs/pages/home/cart_page.dart';
 import 'package:gbs/pages/home/main_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/sign-up': (context) => const SingUpPage(),
         '/home': (context) => const MainPage(),
         '/books': (context) => const BookPage(),
+        '/book-details': (context) => const BookDetail(),
         '/carts': (context) => const CartPage(),
         '/users': (context) => const UserPage(),
       },

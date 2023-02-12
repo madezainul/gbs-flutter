@@ -7,18 +7,15 @@ class BookCardGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
-      height: 100,
-      // margin: EdgeInsets.only(top: 20, right: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: secondaryColor,
+        color: backgroundColor1,
       ),
       child: Column(
         children: [
           Container(
-            height: 100,
-            width: 100,
+            height: 190,
+            width: 160,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10),
